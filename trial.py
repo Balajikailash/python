@@ -28,7 +28,7 @@ msg['To'] = ", ".join(receiver)
 options = {
 	'server':'https://bits.bazaarvoice.com/jira'
 	 }
-jira = JIRA(options, basic_auth=('btx','Theone@1'))
+jira = JIRA(options, basic_auth=('',''))
 
 # DOS touched blocked tickets 
 blocked_issues = jira.search_issues("labels = DOSTeam AND status = Blocked AND updated <= '-30d'", maxResults=5000)
